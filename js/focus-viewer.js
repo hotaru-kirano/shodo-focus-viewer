@@ -317,11 +317,11 @@
 		if (!state.sourceSVG) {
 			return;
 		}
+		stopAnimationLoop();
 		clearMessage();
 		var container = kanjiImage();
 		container.innerHTML = "";
 		if (state.mode === modeNames.groups) {
-			stopAnimationLoop();
 			container.style.alignItems = "stretch";
 			container.style.justifyContent = "stretch";
 			container.style.overflowY = "auto";
@@ -346,7 +346,6 @@
 		}
 		colourTextByStroke(svg);
 		container.appendChild(svg);
-		startAnimationLoop();
 	}
 
 	function loadKanjiFromState() {

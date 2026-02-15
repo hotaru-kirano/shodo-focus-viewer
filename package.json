@@ -6,6 +6,7 @@
   "scripts": {
     "postinstall": "neu update",
     "desktop:prepare": "node scripts/build-desktop-dist.mjs",
+    "desktop:launch": "bash scripts/launch-desktop.sh",
     "desktop:dev": "npm run desktop:prepare && neu run",
     "desktop:build": "npm run desktop:prepare && neu build"
   },

@@ -1,46 +1,22 @@
-# KanjiVG
-*Code For The* ***[kanjivg.tagaini.net][Website]*** *Website.*
+# KanjiVG Focus Viewer (Desktop Only)
 
----
+This repository is intentionally limited to the Neutralino desktop app.
+There is no Jekyll/static website build or alternate web entrypoint.
 
-## Content
-*Relevant Files / Non-Library Files.*
-
-<br>
-
-- **[`_layouts/default.html`][Layouts]**
-
-    *Layout For Every Page .*
-
-- **[`_config.yml`][Config]**
-
-    *Layout For Every Page .*
-
-- **[`js/kanjiviewer.js`][Viewer]**
-
-    *Kanji Visualization Logic .*
-
-- **[`kanjivg`][Kanji]**
-
-    ***[KanjiVG]*** *Github Submodule .*
-
-
-[Layouts]: _layouts/default.html
-[Config]: _config.yml
-[Viewer]: js/kanjiviewer.js
-[Kanji]: kanjivg
-
-[KanjiVG]: https://github.com/KanjiVG/kanjivg
-
-[Website]: https://kanjivg.tagaini.net/
-
-## Desktop Launch (npm-only, system webview)
-
-This repo can run in its own desktop window via NeutralinoJS (uses the OS webview runtime).
+## Run
 
 1. `npm install`
-2. `npm run desktop:dev`
+2. `npm run desktop:launch` (checks `desktop-dist/`, rebuilds if missing or stale, then runs)
+3. `npm run desktop:dev` (always rebuilds before running)
 
-Build desktop binaries:
+## Build
 
 1. `npm run desktop:build`
+
+## Project Layout
+
+- `desktop-viewer.html`: desktop entry page.
+- `neutralino.config.json`: Neutralino window/app config.
+- `scripts/build-desktop-dist.mjs`: copies runtime files into `desktop-dist/`.
+- `css/`, `img/`, `js/`: UI/runtime assets used by the desktop page.
+- `kanjivg/kanji/` and `kanjivg/kvg-index.json`: KanjiVG data used by the viewer.
