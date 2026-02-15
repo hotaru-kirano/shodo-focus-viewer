@@ -1,0 +1,15 @@
+{
+  "name": "kanjivg-focus-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop launcher for KanjiVG Focus Viewer using system webview (NeutralinoJS).",
+  "scripts": {
+    "postinstall": "neu update",
+    "desktop:prepare": "node scripts/build-desktop-dist.mjs",
+    "desktop:dev": "npm run desktop:prepare && neu run",
+    "desktop:build": "npm run desktop:prepare && neu build"
+  },
+  "devDependencies": {
+    "@neutralinojs/neu": "^11.7.0"
+  }
+}

@@ -1,0 +1,68 @@
+markdown: rdiscount
+title: KanjiVG
+author: Ulrich Apel
+url: https://github.com/KanjiVG/kanjivg.github.com
+year: 2025
+group: https://groups.google.com/group/kanjivg
+jquery: jquery-3.7.1.min.js
+project-links:
+- text: Home
+  url: index.html
+  icon: home
+- text: Viewer
+  url: viewer.html
+  icon: picture
+- text: Focus Viewer
+  url: focus-viewer.html
+  icon: fullscreen
+- text: Listing
+  url: listing.html
+  icon: list
+- text: FAQ
+  url: faq.html
+  icon: question-sign
+source-links:
+- text: Download (at Github)
+  url: https://github.com/KanjiVG/kanjivg/releases
+  icon: download
+- text: Repository (at Github)
+  url: https://github.com/KanjiVG/kanjivg
+  icon: list
+- text: Issues (at Github)
+  url: https://github.com/KanjiVG/kanjivg/issues
+  icon: exclamation-sign
+format-links:
+- text: Files
+  url: files.html
+  icon: info-sign
+- text: SVG Format
+  url: svg-format.html
+  icon: info-sign
+- text: Stroke types
+  url: stroke-types.html
+  icon: info-sign
+- text: Variants
+  url: variants.html
+  icon: info-sign
+- text: Radicals
+  url: radicals.html
+  icon: info-sign
+- text: Glossary
+  url: glossary.html
+  icon: info-sign
+- text: References
+  url: ref.html
+  icon: info-sign
+- text: Known problems
+  url: known-problems
+  icon: info-sign
+community-links:
+- text: Mailing list
+  url: https://groups.google.com/group/kanjivg
+  icon: list-alt
+- text: Projects using KanjiVG
+  url: projects.html
+  icon: asterisk
+- text: Related projects
+  url: related.html
+  icon: heart

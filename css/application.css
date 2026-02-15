@@ -1,0 +1,276 @@
+/* This class is used to notify of undocumented segments on the
+   documentation pages. */
+
+.undocumented {
+    background-color: #d2ffbf;
+}
+
+/* Italicise romaji. */
+
+.romaji {
+    font-style: italic;
+}
+
+/* Radical used. */
+
+.used {
+    background: pink;
+}
+
+code {
+    color: black;
+}
+
+.viewer-input {
+    width: 3em;
+}
+
+#kanji-image svg {
+    display: block;
+    width: 327px;
+    height: 327px;
+}
+
+#viewer-controls {
+    display: grid;
+}
+
+@media screen and (min-width: 600px) {
+    #kanji-etc {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #kanji-options {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #kanji-actions {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        display: inline;
+    }
+
+    #kanji-visuals {
+        display: grid;
+    }
+
+    #kanji-image {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    #sub-images {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #kanji-etc {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    #kanji-options {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    #kanji-actions {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: inline;
+    }
+}
+
+.control-label {
+    width: unset;
+}
+
+label {
+    display: unset;
+}
+
+.sub-image {
+    display: inline;
+}
+
+#radical-images {
+    display: inline;
+}
+
+#group-images {
+    display: inline;
+}
+
+.group-image {
+    display: inline;
+}
+
+#sub-images {
+    display: inline;
+}
+
+svg.group-svg {
+    display: block;
+    width: 145px;
+    height: 145px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+figure {
+    display: inline-table;
+    padding: 0px;
+    margin: 0px;
+    margin-inline: 0px;
+    margin-block: 0px;
+}
+
+.radical-explanation {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.radical-stroke {
+    stroke: #c586d7;
+    stroke-width: 4px;
+}
+
+/* Make the types very big so it's easier to see them. */
+
+dt.stroke-type {
+    font-size: 2em;
+    margin: 0.5em;
+    font-family: "Meiryo UI";
+}
+
+#user-message {
+    background: #eed;
+    display: none;
+    font-size: 1.5em;
+    line-height: 2em;
+    margin: 1em;
+    padding: 1em;
+}
+
+#kanji-label {
+    font-size: 1.5em;
+}
+
+#kanji {
+    font-size: 1.5em;
+}
+
+#focus-viewer-page {
+    margin: 1em auto;
+    max-width: 860px;
+}
+
+#focus-kanji-box {
+    background: #fff;
+    border: 2px solid #c7ced8;
+    border-radius: 8px;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+#focus-kanji-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#focus-kanji-image svg {
+    display: block;
+    width: min(88vw, 720px);
+    height: min(88vw, 720px);
+    max-width: 100%;
+    max-height: 78vh;
+}
+
+#focus-controls {
+    margin: 0;
+}
+
+#focus-control-row {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#focus-control-row label {
+    margin: 0;
+    font-weight: bold;
+}
+
+#focus-kanji {
+    width: 4em;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+#focus-speed {
+    width: 130px;
+}
+
+#focus-speed-value {
+    min-width: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.focus-mode-button.is-active,
+#focus-stroke-toggle.is-active {
+    background-color: #2f4f7f;
+    border-color: #2f4f7f;
+    color: #fff;
+}
+
+#focus-user-message {
+    background: #eed;
+    display: none;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin-top: 12px;
+    padding: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    #focus-kanji-box {
+        min-height: 280px;
+    }
+
+    #focus-control-row .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}

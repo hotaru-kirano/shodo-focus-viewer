@@ -1,0 +1,436 @@
+---
+layout: default
+title: Radicals
+name: radicals.html
+---
+
+<div class="page-header">
+  <h1>Radicals in KanjiVG</h1>
+</div>
+
+<p>
+  KanjiVG contains information on
+  the <a href="glossary.html#radical">radical</a> used by each
+  kanji. Since different authors use different radicals for the same
+  kanji, it provides several different choices of radical, such
+  as <code>general</code> for generally-accepted radicals,
+  or <code>nelson</code>
+  for <a href="glossary.html#nelson-radicals">the radicals used by the
+  Nelson kanji dictionary</a>. See
+  <a href="svg-format.html#radical">the SVG Format page</a> for a
+  complete list of possible values.
+</p>
+
+<p>
+  This page details the choices made for the values of
+  <a href="svg-format.html#element"><code>kvg:element</code></a>, the visual
+  representation of a kanji radical.
+</p>
+
+<p>
+  For all of the <a href="glossary.html#variant-radical">non-variant
+  radical</a> forms, there are two equivalent Unicode code points with
+  the same visual form. One is in
+  the <a href="glossary.html#kangxi-radicals-block">Kangxi Radicals
+  block</a>, and the other is in
+  the <a href="glossary.html#cjk-unified-ideographs">CJK Unified
+  Ideograph block</a>, where the same radicals are scattered
+  throughout. The equivalence between these two sets of identical
+  radicals is given in the Unicode Character Database (UCD) in the
+  file
+  <a href="https://www.unicode.org/Public/UCD/latest/ucd/CJKRadicals.txt">CJKRadicals.txt</a>,
+  which maps between the pairs.
+</p>
+
+<p>
+  <strong>
+    KanjiVG uses only the CJK Unified Ideograph versions of these
+    equivalent entries.
+  </strong>
+  KanjiVG does not use the Kangxi Radicals block at all. Where a
+  <a href="glossary.html#variant-radical">variant radical</a> is used,
+  KanjiVG also specifies the
+  the <a href="svg-format.html#original"><code>kvg:original</code></a>
+  field on the group. This also does not use the Kangxi Radicals block
+  at all.
+</p>
+
+<p>
+  However, KanjiVG does use some parts of
+  the <a href="glossary.html#cjk-radicals-supplement">CJK Radicals
+  Supplement block</a>. For example U+2E97 ⺗ is used for
+  the <span class='romaji'>shitagokoro</span> variant of Kangxi
+  radical 61, rather than
+  the <a href="glossary.html#cjk-unified-ideographs">CJK Unified
+  Ideographs</a> equivalent form U+38FA 㣺. The following section
+  details the choices made by the KanjiVG authors.
+</p>
+
+<section id="radicals-used">
+
+<h2>Radicals used</h2>
+
+<section id="shin-nyo">
+  <h3>
+    Shin-nyō
+  </h3>
+
+<p>
+  The radical used for Kangxi radical 162, "walk", known
+  as <span class='romaji'>shin-nyō</span> in Japanese, is either
+  U+8FB6 辶 for groups of four strokes, or U+2ECC ⻌ for groups of
+  three strokes. (Depending on the font, U+8FB6 may appear to contain
+  only three strokes.)
+</p>
+
+<p>
+  The visually highly similar U+2ECD, from CJK Radicals Supplement,
+  and U+FA66, from CJK Compatibility Ideographs, are not used by
+  KanjiVG.
+</p>
+
+</section>
+
+<section id="shoku-hen">
+
+  <h3>
+    Shoku-hen
+  </h3>
+
+  <p>
+    For Kangxi radical 184, "eat", known
+    as <span class='romaji'>shoku-hen</span> in Japanese, 飠 U+98E0
+    from CJK Unified Ideographs is used for the eight-stroke variant,
+    but ⻞ U+2EDE from CJK Radicals Supplement is used for the
+    nine-stroke variant, since there does not seem to be a
+    visually-close equivalent in the CJK Unified Ideographs.
+  </p>
+
+</section>
+
+<section id="other-radicals">
+
+<h3>
+  Other radicals
+</h3>
+
+<p id="table-key">
+  In the following table, <span class="used">the pink colour</span>
+  shows which variant was used for various radicals. The <b>number</b>
+  field gives the Kangxi radical number, and the name is the romanised
+  Japanese name of the radical.
+</p>
+<!--
+The entries in this table are sorted by the radical number on the left.
+-->
+<table>
+  <tr>
+    <th>
+      Number
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      CJK Uni.
+    </th>
+    <th>
+      Rad. Sup.
+    </th>
+    <th>
+      Notes
+    </th>
+  </tr>
+<!--
+
+This is used in two place in KanjiVG, one is kanji/072af.svg, but not
+as a radical. It's also used as the radical for itself, U+353E. So
+it's not really useful to add to this table. Software might need to
+handle it, so I'm not sure what is best to do.
+
+  <tr>
+    <td>
+      26
+    </td>
+    <td>
+      <span class="romaji">
+	Fushi-zukuri
+      </span>
+    </td>
+    <td class="used">
+      㔾 U+353E
+    </td>
+    <td>
+      ⺋ U+2E8B
+    </td>
+    <td>
+      U+353E belongs to "CJK Unified Ideographs Extension A".
+    </td>
+  </tr>
+-->
+  <tr>
+    <td>
+      42
+    </td>
+    <td>
+      <span class="romaji">
+	Naogashira
+      </span>
+    </td>
+    <td>
+      小 U+5C0F
+    </td>
+    <td class="used">
+      ⺌ U+2E8C
+    </td>
+    <td>
+      Largely <a href="glossary.html#nelson-radicals">a Nelson radical</a>.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      58
+    </td>
+    <td>
+      <span class='romaji'>Kei-gashira</span>
+    </td>
+    <td>
+      彐 U+5F50
+    </td>
+    <td class='used'>
+      ⺕ U+2E95
+    </td>
+    <td>
+      Largely <a href="glossary.html#nelson-radicals">a Nelson radical</a>.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      61
+    </td>
+    <td>
+      <span class="romaji">
+	Risshinben
+      </span>
+    </td>
+    <td class="used">
+      忄 U+5FC4
+    </td>
+    <td>
+      ⺖ U+2E96
+    </td>
+  </tr>
+  <tr>
+    <td>
+      61
+    </td>
+    <td><span class="romaji">Shita-gokoro</span></td>
+    <td>㣺 U+38FA</td>
+    <td class="used">⺗ U+2E97</td>
+  </tr>
+  <tr>
+    <td>
+      85
+    </td>
+    <td>
+      <span class='romaji'>
+	Sanzui
+      </span>
+    </td>
+    <td class='used'>
+      氵 U+6C35
+    </td>
+    <td>
+      ⺡ U+2EA1
+    </td>
+    <td>
+      As an exception, U+2EA1 is used as the element for the special
+      case of U+2EA1 itself.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      85
+    </td>
+    <td>
+      <span class="romaji">
+	Shitamizu
+      </span>
+    </td>
+    <td class="used">
+      氺 U+6C3A
+    </td>
+    <td>
+      ⺢ U+2EA2
+    </td>
+  </tr>
+  <tr>
+    <td>
+      87
+    </td>
+    <td>
+      <span class="romaji">
+	Tsume-kanmuri
+      </span>
+    </td>
+    <td>
+      爫 U+722B
+    </td>
+    <td class="used">
+      ⺤ U+2EA4
+    </td>
+    <td>
+      U+722B does not form part of
+      the <a href="glossary.html#jis-levels">JIS Level one and two
+      kanji standards</a>, so it was never an element of KanjiVG,
+      hence unlike
+      <span class='romaji'>sanzui</span>
+      and <span class='romaji'>kemono-hen</span> there is no
+      "self-exception" for this character.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      90
+    </td>
+    <td>
+      <span class='romaji'>
+	Shō-hen
+      </span>
+    </td>
+    <td>
+      丬 U+4E2C
+    </td>
+    <td class='used'>
+      ⺦ U+2EA6
+    </td>
+    <td>
+      Largely <a href="glossary.html#nelson-radicals">a Nelson radical</a>.
+    </td>
+  </tr>
+  <tr>
+    <td>94</td>
+    <td><span class='romaji'>Kemono-hen</span></td>
+    <td>
+      犭 U+72AD
+    </td>
+    <td class='used'>
+      ⺨ U+2EA8
+    </td>
+    <td>
+      As an exception, U+72AD is used as the element for the special
+      case of U+72AD itself.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      122
+    </td>
+    <td>
+      <span class="romaji">
+	Yokome
+      </span>
+    </td>
+    <td class="used">
+      罒 U+7f52 
+    </td>
+    <td>
+      ⺫ U+2EAB
+    </td>
+  </tr>
+  <tr>
+    <td>
+      146
+    </td>
+    <td>
+      <span class="romaji">
+	Nishi
+      </span>
+    </td>
+    <td class="used">
+      覀 U+8980
+    </td>
+    <td>
+      ⻃ U+2EC3
+    </td>
+    <td>
+      As an exception, U+2EC3 is used as the element for the special
+      case of U+2EC3 itself.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      163
+    </td>
+    <td>
+      <span class='romaji'>
+	Ōzato
+      </span>
+    </td>
+    <td>
+      阝 U+961D
+    </td>
+    <td class='used'>
+      ⻏ U+2ECF
+    </td>
+    <td>
+      The character U+961D is actually radical 170 rather than 163,
+      but it may be substituted for radical 163 as well as for
+      170. KanjiVG clearly distinguishes the two using U+2ECF for this
+      radical.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      170
+    </td>
+    <td>
+      <span class='romaji'>
+	Kozato-hen
+      </span>
+    </td>
+    <td>
+      阝 U+961D
+    </td>
+    <td class='used'>
+      ⻖ U+2ED6
+    </td>
+    <td>
+      As an exception, U+961D is used as the element for the special
+      case of U+961D itself.
+    </td>
+  </tr>
+</table>
+<p>
+In all cases not documented above, the version from the CJK Unified
+Ideographs rather than from the CJK Radicals Supplement is used.
+</p>
+</section>
+</section> <!-- radicals-used -->
+
+<section id="nelson-radicals">
+<h2>Special cases for Nelson radicals</h2>
+
+<h3>Moon/meat</h3>
+
+<p>
+In some cases, such as kanji/06716.svg, Nelson changes the number of
+the radical from 74 (Moon) to 130 (Meat), with the radical element
+remaining the same. KanjiVG deals with this case by creating a doubled
+grouping, with the Nelson radical group and the tradit radical group
+around the same paths.
+</p>
+</section> <!-- nelson-radicals -->
+
+<h2>See also</h2>
+
+<p>
+  This Unicode 
+
+  <a href="ref.html#cjk-rad-sup-to-unified">
+    CJK Radicals Supplement
+  </a> 
+
+  page gives information on correspondances between the CJK Radicals
+  Supplement and the CJK Unified ideographs.
+</p>

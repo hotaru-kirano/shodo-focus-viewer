@@ -1,0 +1,17 @@
+CNAME
+kanjivg.iml
+.idea/
+_site/
+.jekyll-cache/
+viewer.cgi
+listing.cgi
+update.pl
+node_modules/
+bin/
+dist/
+.storage/
+*.log
+js/neutralino.js
+js/neutralino.d.ts
+desktop-dist/
+.tmp/

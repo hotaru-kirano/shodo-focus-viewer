@@ -1,0 +1,274 @@
+---
+layout: default
+title: Glossary
+name: glossary.html
+---
+
+<div class="page-header">
+  <h1>Glossary</h1>
+</div>
+
+<p>
+  Various terminology crops up repeatedly when documenting KanjiVG,
+  some of it quite specialised. This page gathers brief definitions of
+  important terms so that repetition of explanation can be avoided.
+</p>
+
+
+<!-- Alphabetical order -->
+
+<!-- ids currently go on the h2 element, and are lower case, hyphen
+     separated. -->
+
+<h2 id="cjk-radicals-supplement">CJK Radicals Supplement</h2>
+
+<p>
+  A block of Unicode from U+2E80 to U+2EF3 containing
+  the <a href="#variant-radical">variant forms of kanji
+  radicals</a>. See <a href="radicals.html">Radicals in KanjiVG</a>.
+</p>
+
+<h2 id="cjk-strokes">CJK Strokes</h2>
+
+<p>
+  A block of Unicode from U+31C0 to U+31E3 containing the shapes of
+  individual kanji strokes.  The names of the strokes, such as D or
+  HZ, are the initials of Chinese descriptive names. See
+
+  <a href="stroke-types.html">Stroke types in KanjiVG</a>
+
+  for how they are used by KanjiVG. See
+
+  <a href="ref.html#cjk-strokes">the Unicode documentation</a>
+
+  for more information about these.
+</p>
+
+<h2 id="cjk-unified-ideographs">CJK Unified Ideographs</h2>
+
+<p>
+  A block of Unicode containing kanji. The basic block goes from
+  U+4E00 to U+9FFF, but it was extended with CJK Unified Ideographs
+  Extension A from U+3400 to U+4DBF, and other extensions.
+</p>
+<p>
+  Since the exact block of Unicode that a kanji belongs to is not
+  vitally important to KanjiVG, in this documentation we refer to all
+  of these blocks as the "CJK Unified Ideographs". However, we do
+  distinguish these from the <a href="#kangxi-radicals-block">Kangxi
+  Radicals block</a> or the <a href="#cjk-strokes">CJK Strokes</a>
+  block.
+</p>
+
+<h2 id="element">Element</h2>
+
+<p>
+  Generic groupings of strokes of kanji into meaningful parts are
+  referred to as "elements" in this documentation. The
+  word <a href="#radical">radical</a> is reserved to mean the
+  identifier of the kanji under a classification system such as
+  the <a href="#kangxi-radicals">Kangxi radical</a> system.
+</p>
+
+<h2 id="han-unification">Han Unification</h2>
+
+<p>
+  Part of the original effort of Unicode to fit as many characters as
+  possible into sixteen bits by using the same code point for
+  characters considered to be identical. These characters are often
+  graphically different, thus the Japanese-style
+  KanjiVG <a href="#vector-graphics">vector graphics</a> for various
+  Unicode code points are not appropriate for Chinese usage.
+</p>
+
+<h2 id="jinmei">Jinmei kanji</h2>
+
+<p>
+<ruby>人名漢字<rt>じんめいかんじ</rt></ruby> An extension of
+the <a href="#joyo-kanji">Joyo Kanji</a> for people's
+names. See <a href="variants.html">variants</a>.
+</p>
+
+<h2 id="jis-levels">JIS Level One and Two</h2>
+
+<p>
+  <ruby>第1・第2水準漢字<rt>だいいち・だいにすいじゅんかんじ</rt></ruby>
+
+  Two sets of kanji which were used as the basis for the coverage of
+  KanjiVG. See <a href="files.html#coverage">Coverage in KanjiVG
+  files</a>. All of the 2,000 <a href="#joyo-kanji">Joyo Kanji</a>,
+  and most of the <a href="#jinmei">Jinmei Kanji</a> are in level one,
+  and a further 3,000 or so characters are in level two, making around
+  6,000 kanji.
+</p>
+
+<p>
+  This is the kanji part of the JIS X 0208 standard.  These sets were
+  the standard sets of kanji available on Japanese-language computing
+  platforms before the advent of Unicode.
+</p>
+<p>
+  There are further levels three and four, but KanjiVG does not cover
+  them.
+</p>
+
+<h2 id="jis-radicals">JIS radicals</h2>
+
+<p>
+  Radicals used by <a href="ref.html#jis-jiten-ref">JIS Kanji Jiten</a>
+  where these differ from the radicals. This value was added to deal
+  with inconsistencies between KanjiVG and Kanjidic and other
+  references.
+</p>
+
+<h2 id="joyo-kanji">Joyo Kanji</h2>
+
+<p>
+  A set of just over 2,000 "daily use" characters, used in education and
+  publications.
+</p>
+
+<h2 id="kaisho">Kaisho</h2>
+
+<p>
+  The <a href="#schoolbook-fonts">schoolbook fonts</a> are based on a
+  style of Japanese writing known as kaisho
+
+  (<ruby>楷書<rt>かいしょ</rt></ruby>).
+
+  This is a non-cursive form of handwriting where each stroke is
+  written separately.
+</p>
+
+<h2 id="kangxi-radicals">Kangxi radicals</h2>
+
+<p>
+  The historical <a href="#radical">radical</a> system of an old
+  Chinese dictionary. These radicals are labelled <code>general</code>
+  or <code>tradit</code> in KanjiVG, in contrast with
+  the <a href="#nelson-radicals">Nelson radicals</a>.
+</p>
+
+<h2 id="kangxi-radicals-block">Kangxi Radicals Block</h2>
+
+<p>
+  A block of Unicode from U+2F00 to U+2FD5 containing the canonical
+  form of the 214 <a href="#kangxi-radicals">Kangxi radicals</a>. Characters
+  from this block are not used by KanjiVG.
+</p>
+
+<h2 id="kanji">Kanji</h2>
+
+<p>
+  For brevity's sake, the KanjiVG documentation uses the
+  word <i>kanji</i> to indicate sinographs, Chinese characters, hanzi,
+  and so forth. We sometimes use the term "Chinese characters" when
+  referring specifically to characters used in China rather than in
+  Japan.
+</p>
+
+
+<h2 id="nelson-radicals">Nelson radicals</h2>
+
+<p>
+  The altered radicals used in the <a href="ref.html#nelson">Nelson
+    kanji dictionary</a>. Nelson used a more systematic approach to
+    recategorise kanji into radicals, resulting in different values
+    than the <a href="#kangxi-radicals">Kangxi radical</a> system.
+    This was also copied into <a href="ref.html#kanjidic">the Kanjidic
+    online kanji dictionary</a>.
+</p>
+
+<figure>
+<table>
+<tr>
+<td>
+<svg style="fill:none;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;" width="218" height="218" viewbox="0 0 109 109"><path style="stroke-width:4px;stroke:orange;" d="M38.26,8.25c0.06,0.55,0.12,1.42-0.11,2.21c-1.35,4.66-9.07,14.9-19.65,21.17"/><path style="stroke-width:4px;stroke:black;" d="M34.75,19.67c1.18,0.71,2.78,0.65,4.72,0.47c5.19-0.47,36.11-3.98,40.83-4.22s5.44,1.08,4.96,5.32c-0.57,4.97-4.76,18.51-8.55,24.97c-2.58,4.4-4.77,1.77-7.55-1.18"/><path style="stroke-width:4px;stroke:red;" d="M33.99,26.83c0.44,0.22,1.12,0.83,1.12,2.14c0,1.52-1.56,5.15-1.8,7.83c-0.12,1.38-0.38,2.7,1.61,2.02c6.84-2.31,25.54-4.51,31.01-5.12"/><path style="stroke-width:4px;stroke:red;" d="M66.03,22.7c0.37,0.3,1.17,1.27,1.12,1.9c-0.26,2.9-0.87,7.55-1.33,12.59"/><path style="stroke-width:4px;stroke:red;" d="M49.8,22.63c0.57,0.49,1.09,1.46,1.09,2.25c0,6.78,0.61,17.12-8.99,24.2"/><path style="stroke-width:4px;stroke:black;" d="M33.27,47.25c0.05,0.51,0.09,1.32-0.09,2.05c-1.09,4.31-7.35,13.78-15.93,19.58"/><path style="stroke-width:4px;stroke:black;" d="M30.75,58.67c1.18,0.71,2.78,0.65,4.72,0.47c5.19-0.47,38.61-3.99,43.33-4.22s5.45,1.08,4.96,5.32C83,66.75,78,88,70.71,96.71c-3.28,3.92-4.77,1.77-7.55-1.18"/><path style="stroke-width:4px;stroke:red;" d="M28.08,67.76c0.49,0.25,1.25,0.93,1.25,2.39c0,1.7-2.24,7.26-2.51,10.25c-0.14,1.54-0.43,3.01,1.8,2.26C36.26,80.08,54,78,63.78,77.94"/><path style="stroke-width:4px;stroke:red;" d="M64.9,63.15c0.42,0.33,1.31,1.42,1.25,2.12c-0.29,3.24-0.9,8.73-2.48,15.58"/><path style="stroke-width:4px;stroke:red;" d="M47.25,63.07c0.64,0.54,0.8,2.13,0.72,3.02c-0.72,8.41-4.22,24.41-16.55,32.55"/></svg>
+</td>
+<td>
+<svg style="fill:none;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;" width="218" height="218" viewbox="0 0 109 109"><path style="stroke-width:4px;stroke:orange;" d="M8.51,21.27c1.22,0.36,3.43,0.47,4.66,0.36c9.83-0.88,25.58-2.88,34.94-3.74c2.02-0.19,3.24,0.17,4.25,0.35"/><path style="stroke-width:4px;stroke:black;" d="M12.45,34.21c0.42,0.66,1.25,1.97,1.34,2.84C14,39,17.53,58.96,17.64,59.65"/><path style="stroke-width:4px;stroke:black;" d="M14.49,35.27c2.36-0.11,31.86-3.59,34.01-3.72c1.79-0.11,2.83,1.44,2.31,4.72c-0.81,5.17-1.67,9.61-4.08,21.05"/><path style="stroke-width:4px;stroke:black;" d="M16.86,46.74c5.95-1.12,27.32-3.31,30.94-3.31"/><path style="stroke-width:4px;stroke:black;" d="M18.98,57.18c9.21-1.34,18.13-1.55,27.95-2.59"/><path style="stroke-width:4px;stroke:black;" d="M30.71,22.8c0.53,1.42,0.97,2.6,0.97,4.66c0,32.68,0.82,58.04-21.43,69.58"/><path style="stroke-width:4px;stroke:black;" d="M16.43,67.36C29.85,69.02,37.5,83,79.15,94.81c3.81,1.08,7.39,1.95,11.1,2.34"/><path style="stroke-width:4px;stroke:red;" d="M63.27,26.29c0.03,0.7,0.05,1.82-0.05,2.83c-0.58,5.96-3.88,19.03-8.4,27.03"/><path style="stroke-width:4px;stroke:red;" d="M64.4,39.3c0.82,0.38,2.32,0.45,3.14,0.38c5.91-0.54,18.62-1.91,23.72-2.49c1.36-0.15,1.92-0.09,2.65-0.02"/><path style="stroke-width:4px;stroke:red;" d="M74.99,13.38c0.63,0.44,1.98,3.29,2.1,4.17s-0.08,53.57-0.21,59.05"/><path style="stroke-width:4px;stroke:red;" d="M61.42,57.17c0.81,0.24,2.28,0.28,3.09,0.24c5.82-0.34,21.15-1.92,26.17-2.28c1.34-0.1,1.9-0.05,2.6-0.01"/><path style="stroke-width:4px;stroke:red;" d="M54.73,78.06c1.13,0.25,3.2,0.86,4.33,0.75c10.7-1.06,29.61-2.95,36.64-3.34c1.87-0.1,3.46,0.21,5.19,0.82"/></svg>
+</td>
+<td>
+<svg style="fill:none;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;" width="218" height="218" viewbox="0 0 109 109"><path style="stroke:orange;" d="M35.74,10.75c0.29,0.42,0.33,0.93,0.26,1.3c-0.4,2.16-3.87,7.32-7.02,10.21"/><path style="stroke:orange;" d="M15.48,23c0.46,0.96,0.74,1.45,0.93,2.71c0.59,4.04,2.6,14.54,3.34,22.15"/><path style="stroke:orange;" d="M16.68,24.76c2.62-0.16,27.08-2.99,29.46-3.19c1.98-0.16,3.18,0.53,3.11,2.89c-0.07,1.96-2,13.79-3.23,21.01"/><path style="stroke:orange;" d="M19.87,35.14c7.17-0.56,21.77-2.08,28.23-2.3"/><path style="stroke:orange;" d="M20.21,46.11c9.41-1.08,18.1-1.77,25.33-2.28"/><path style="stroke:black;" d="M14.37,56.4c1.38,1.1,1.79,2.57,1.83,3.15c0.55,8.95,1.84,21.51,1.98,29.75"/><path style="stroke:black;" d="M16.25,58.79c2.75-0.26,26.37-3.26,28.42-3.42c2.41-0.19,3.74,1.24,3.84,2.92c0.48,7.96,0.24,11.78-1.03,21.62c-1.24,9.59-4.12,3.82-5.28,1.77"/><path style="stroke:black;" d="M30.67,48.74c0.62,0.37,1.94,2.75,2.06,3.49c0.12,0.74-0.08,41.81-0.21,46.4"/><path style="stroke:black;" d="M88.83,9.64c0.08,0.28,0.18,0.71-0.17,1.11C86.58,13.08,76,19,58.31,21.33"/><path style="stroke:red;" d="M72.99,19.17c0.29,1.1,0.53,2.02-0.15,3.12c-2.47,4.02-9.59,11.21-14.31,15.98c-0.57,0.58-0.12,2.22,0.5,2.26c3.73,0.22,8.23,1.47,12.2,3.42"/><path style="stroke:red;" d="M86.98,25.09c0.39,0.61,0.53,2.58,0,3.24C79,38.25,69.64,46.95,58.98,57.63c-1.28,1.29-0.78,2.94,0.78,2.54c6.48-1.69,22.2-4.33,30.53-5.95"/><path style="stroke:red;" d="M84.03,45.89c3.61,2.87,9.32,11.79,10.22,16.25"/><path style="stroke:red;" d="M73.8,59.96c0.09,0.25,1.26,1.27,1.35,2.82c0.43,7.44-0.27,33.43-0.27,35.97"/><path style="stroke:red;" d="M63.51,72.23c0.49,1.27,0.46,3.17,0.1,3.76c-2.35,3.79-8.03,11.91-11.36,15.16"/><path style="stroke:red;" d="M85.25,71.98c4.42,3.77,9.28,13.67,10.5,17.53"/></svg>
+</td>
+</tr>
+</table>
+<figcaption>
+Examples of Nelson radicals in orange versus traditional (Kangxi)
+radicals in red for 芻, 甦 and 緜
+</figcaption>
+</figure>
+
+
+<h2 id="radical">Radicals</h2>
+
+<p>
+  In the KanjiVG documentation and files, "radical" is used as a
+  translation of the Japanese term <ruby>部首<rt>ぶしゅ</rt></ruby>,
+  which essentially means the <a href="#kangxi-radicals">Kangxi
+  radical</a> of the kanji, a group of strokes which can be used to
+  categorise the letter.
+</p>
+
+<p>
+  Some people also refer to the various other component parts of a
+  kanji as "radicals", but KanjiVG reserves the word radical for a
+  single identifier under a classification scheme, and uses the word
+  "element" for the component parts of a kanji other than the
+  radicals.
+</p>
+
+<h2 id="schoolbook-fonts">Schoolbook fonts</h2>
+
+<p>
+  Japanese "schoolbook fonts"
+
+  (<ruby>教科書体<rt>きょうかしょたい</rt></ruby>)
+
+  are fonts designed for Japanese children's textbooks. These fonts
+  are made to resemble high-quality Japanese handwriting in the style
+  known as <a href="#kaisho">kaisho</a>.
+</p>
+
+<h2 id="stroke-order">Stroke order</h2>
+
+<p>
+Stroke order (<ruby>筆順<rt>ひつじゅん</rt></ruby>) is the order in
+which strokes of a kanji should be written. This becomes important in
+the case of cursive forms of Japanese handwriting, where the way in
+which the strokes are joined up depends upon the order in which they
+are written.
+</p>
+
+
+<h2 id="svg">SVG (Scalable Vector Graphics)</h2>
+
+<p>
+  SVG (Scalable Vector Graphics) is a web standard for
+  making <a href="#vector-graphics">vector graphics</a>. KanjiVG
+  extends the basic SVG format. See <a href="svg-format.html">SVG
+  Format</a>.
+</p>
+
+<h2 id="variant-radical">Variant radicals</h2>
+
+<p>
+  Radicals may have more than one visual form. For example, Kangxi
+  radical 61, "water", may take a non-variant form 水, or it may take
+  a variant form 氵.  
+</p>
+
+<h2 id="vector-graphics">Vector graphics</h2>
+
+<p>
+  Vector graphics is a type of computer graphic where the image is
+  defined mathematically as a collection of graphical objects like
+  curves and lines, rather than as a collection of pixel values, like
+  the PNG or JPEG formats. Vector graphics have the advantage over
+  pixel graphics that they can be scaled to any size without becoming
+  blocky, and that the file size of vector graphics is often much
+  smaller than an equivalent pixel format. They have the disadvantage
+  that they can be difficult to create and edit, and they are not
+  useful for storing some kinds of images, for example, photographic
+  images.
+</p>

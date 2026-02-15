@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KanjiVG Focus Viewer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/kanjivg.js"></script>
+    <script src="js/kanjiviewer.js"></script>
+    <script src="js/KanjivgAnimate.js"></script>
+    <script src="js/focus-viewer.js"></script>
+    <style>
+      body {
+        padding: 12px;
+      }
+
+      .desktop-header {
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="desktop-header">
+      <h2>KanjiVG Focus Viewer</h2>
+    </div>
+    <div id="focus-viewer-page">
+      <div id="focus-kanji-box">
+        <div id="focus-kanji-image"></div>
+      </div>
+      <form id="focus-controls" action="#">
+        <div id="focus-control-row">
+          <label for="focus-kanji">Kanji</label>
+          <input class="viewer-input" type="text" id="focus-kanji" value="線" placeholder="線">
+          <button type="submit" class="btn btn-primary">Draw</button>
+          <button type="button" id="focus-random" class="btn">Random</button>
+          <button type="button" class="btn focus-mode-button" data-mode="normal">Normal</button>
+          <button type="button" class="btn focus-mode-button" data-mode="radicals">Radicals</button>
+          <button type="button" class="btn focus-mode-button" data-mode="groups">Groups</button>
+          <button type="button" id="focus-stroke-toggle" class="btn">Stroke #</button>
+          <button type="button" id="focus-animate" class="btn" data-kanjivg-target="#kanji-svg">Animate</button>
+          <label for="focus-speed" id="focus-speed-label">Speed</label>
+          <input type="range" id="focus-speed" min="1" max="10" step="1" value="8">
+          <span id="focus-speed-value">8</span>
+        </div>
+      </form>
+      <div id="focus-user-message"></div>
+    </div>
+  </body>
+</html>
