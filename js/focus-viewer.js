@@ -4,6 +4,7 @@
 	var defaultKanji = "線";
 	var groupPalette = ["#d94848", "#f08c00", "#2b8a3e", "#1f6feb", "#7e57c2", "#0f766e"];
 	var hexKanji = /^\s*([0-9a-fA-F]{4,5})\s*$/;
+	var hanCharacter = /[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\u{20000}-\u{323AF}]/u;
 
 	var modeNames = {
 		normal: "normal",
@@ -150,11 +151,21 @@
 		if (match) {
 			return String.fromCodePoint(parseInt(match[1], 16));
 		}
+		var hanMatch = cleaned.match(hanCharacter);
+		if (hanMatch && hanMatch[0]) {
+			return hanMatch[0];
+		}
 		var chars = Array.from(cleaned);
 		if (!chars.length) {
 			return null;
 		}
 		return chars[0];
+	}
+
+	function drawKanji(kanji) {
+		state.file = null;
+		state.kanji = kanji;
+		loadKanjiFromState();
 	}
 
 	function setAllPaths(svg, stroke, width) {
@@ -409,9 +420,21 @@
 			setMessage("Enter a kanji or hexadecimal code point.");
 			return;
 		}
-		state.file = null;
-		state.kanji = kanji;
-		loadKanjiFromState();
+		drawKanji(kanji);
+	}
+
+	function onPaste(event) {
+		if (!event || !event.clipboardData) {
+			return;
+		}
+		var text = event.clipboardData.getData("text");
+		var kanji = firstKanji(text);
+		if (!kanji) {
+			return;
+		}
+		event.preventDefault();
+		kanjiInput().value = kanji;
+		drawKanji(kanji);
 	}
 
 	function randomKanjiAction() {
@@ -457,6 +480,8 @@
 			drawFromInput();
 			return false;
 		});
+
+		document.addEventListener("paste", onPaste);
 
 		jQuery("#focus-random").click(function () {
 			randomKanjiAction();
